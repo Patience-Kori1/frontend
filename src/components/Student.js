@@ -18,7 +18,7 @@ function Student() {
   return (
     <div className = 'd-flex vh-10 bg-primary justify-content-center align-items-center'>
         <div className = 'w-50 bg-white rounded'>
-            < button className = 'btn btn-success'> Ajouter</button>
+            <Link to="/create" className="btn btn-success">Ajouter</Link>
             <table className = 'table'> 
               <thead>
                 <tr>
@@ -36,8 +36,6 @@ function Student() {
                             <td>
                                 <button className = 'btn btn-primary'> Modifier </button>
                                 <button className= 'btn btn-danger'> Supprimer </button>
-                                <Link to="/create" className="btn btn-success">Ajouter</Link>
-
                             </td>
                         </tr>
                     ))

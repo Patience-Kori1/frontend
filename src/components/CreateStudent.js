@@ -1,18 +1,20 @@
 import React from 'react';
 import {useState} from "react";
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 function CreateStudent() {
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
+    const navigate = useNavigate();
 
     function handleSubmit(event) {
         event.preventDefault();
         axios.post('http://localhost:8081/create', {name, email})
         .then(res => {
             console.log("Created student", res);
-            // navigate('/')
+            navigate('/');
         })
     }
 
